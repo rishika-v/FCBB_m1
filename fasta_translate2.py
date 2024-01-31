@@ -17,15 +17,15 @@ def translate_dna(seq, codon_table):
         codon = seq[i:i+3].upper()
         if codon in codon_table:
             amino = codon_table[codon]
-            if amino == "*":
-                break
             protein.append(amino)
     return ''.join(protein)
 
 codon_table = read_codon('codon_table.txt')
 fasta = read_fasta()
 
-for id, seq in fasta.items():
-    protein_seq = translate_dna(seq, codon_table)
-    print(f">{id}")
-    print(protein_seq)
+id_list = list(fasta.keys())
+id = id_list[0]
+seq = fasta.get(id)
+protein_seq = translate_dna(seq, codon_table)
+print(f">{id}")
+print(protein_seq)

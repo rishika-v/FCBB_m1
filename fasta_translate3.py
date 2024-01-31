@@ -17,8 +17,6 @@ def translate_dna(seq, codon_table):
         codon = seq[i:i+3].upper()
         if codon in codon_table:
             amino = codon_table[codon]
-            if amino == "*":
-                break
             protein.append(amino)
     return ''.join(protein)
 
