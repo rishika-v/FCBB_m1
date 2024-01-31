@@ -21,6 +21,8 @@ def translate_dna(seq, codon_table):
             if amino == "*":
                 break
             protein.append(amino)
+        else:
+            print(f"Error: invalid nucleotide in codon: {codon}")
     return ''.join(protein)
 
 codon_table = read_codon('codon_table_hard.txt')
