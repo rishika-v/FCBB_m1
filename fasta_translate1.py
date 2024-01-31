@@ -20,7 +20,7 @@ def read_fasta():
 
 def main():
     fasta = read_fasta()
-    print(fasta)
+    print(fasta, file=sys.stdout)
 
 if __name__ == "__main__":
     main()

@@ -25,5 +25,5 @@ fasta = read_fasta()
 
 for id, seq in fasta.items():
     protein_seq = translate_dna(seq, codon_table)
-    print(f">{id}")
-    print(protein_seq)
+    print(f">{id}", file=sys.stdout)
+    print(protein_seq, file=sys.stdout)

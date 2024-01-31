@@ -27,5 +27,5 @@ id_list = list(fasta.keys())
 id = id_list[0]
 seq = fasta.get(id)
 protein_seq = translate_dna(seq, codon_table)
-print(f">{id}")
-print(protein_seq)
+print(f">{id}", file=sys.stdout)
+print(protein_seq, file=sys.stdout)
