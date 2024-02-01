@@ -17,9 +17,5 @@ def read_fasta():
         fasta_dict[sequence_id] = ''.join(sequence_data)
     return fasta_dict
 
-def main():
-    fasta = read_fasta()
-    print(fasta, file=sys.stdout)
-
-if __name__ == "__main__":
-    main()
+fasta = read_fasta()
+print(fasta, file=sys.stdout)
