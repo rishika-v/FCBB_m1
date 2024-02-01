@@ -15,7 +15,6 @@ def read_fasta():
             sequence_data.append(line)
     if sequence_id:
         fasta_dict[sequence_id] = ''.join(sequence_data)
-
     return fasta_dict
 
 def main():
